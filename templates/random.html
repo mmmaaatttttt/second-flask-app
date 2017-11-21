@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your number was {{ matt }}.</h1>
+<h3>Do you like {{ some_other_kwarg }}s?</h3>
+{% if matt > 0.5 %}
+  <p>You win!</p>
+{% else %}
+  <p>You lose :(</p>
+{% endif %}
+{% endblock %}
