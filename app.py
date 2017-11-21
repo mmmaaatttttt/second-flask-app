@@ -1,7 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from random import random
 
 app = Flask(__name__)
+
+@app.route("/introduce")
+def introduce():
+    return render_template("introduce.html")
+
+@app.route("/greet")
+def greet():
+    first_name = request.args['first_name'].title()
+    last_name = request.args['last_name'].title()
+    return render_template(
+        "greet.html",
+        first_name=first_name,
+        last_name=last_name
+    )
 
 @app.route("/")
 def say_hi():

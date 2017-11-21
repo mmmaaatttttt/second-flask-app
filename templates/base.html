@@ -6,8 +6,8 @@
 </head>
 <body>
   <nav>
-    <a href="/">Home</a>
-    <a href="/feeling_lucky">I'm Feeling Lucky</a>
+    <a href="{{ url_for('say_hi') }}">Home</a>
+    <a href="{{ url_for('coin_flip') }}"/>I'm Feeling Lucky</a>
   </nav>
   {% block content %}
   {% endblock %}
